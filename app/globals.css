@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --bg:#071013; --panel:#0c181b; --line:#1b3030; --lime:#c5f36a; --text:#f4f7f1; --muted:#8d9b97; }
+:root { --bg:#071013; --panel:#0c181b; --line:#1b3030; --lime:#c6ff00; --text:#f4f7f1; --muted:#8d9b97; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--bg); color:var(--text); font-family:Arial, Helvetica, sans-serif; }
@@ -83,3 +83,23 @@ h1 { font-size:clamp(48px, 7vw, 88px); line-height:.96; letter-spacing:-.075em; 
   .schema-visual b { font-size:21px; }
   .schema-badge { right:18px; bottom:25px; }
 }
+
+.architecture-visual { height:370px; position:relative; border:1px solid var(--line); background:#091618; overflow:hidden; }
+.architecture-visual:before { content:""; position:absolute; inset:0; opacity:.25; background-image:linear-gradient(#284340 1px,transparent 1px),linear-gradient(90deg,#284340 1px,transparent 1px); background-size:42px 42px; }
+.architecture-visual .arch-card { z-index:1; max-width:250px; }
+.architecture-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.architecture-grid > div { border:1px solid var(--line); background:var(--panel); padding:25px; }
+.architecture-grid svg { color:var(--lime); }
+.architecture-grid h3 { margin:24px 0 8px; font:14px ui-monospace,monospace; }
+.architecture-grid p { color:var(--muted); font-size:14px; line-height:1.5; margin:0; }
+.work-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.work-card { position:relative; border:1px solid var(--line); background:var(--panel); padding:30px 25px; display:flex; flex-direction:column; min-height:500px; }
+.work-number { color:var(--lime); font:12px ui-monospace,monospace; margin-bottom:50px; }
+.work-card h3 { font-size:25px; line-height:1.08; letter-spacing:-.05em; margin:0 0 18px; }
+.work-description { color:var(--muted); line-height:1.6; font-size:14px; margin:0 0 18px; }
+.work-features { color:#b6c4bd; font-size:13px; line-height:1.5; margin:0 0 24px; }
+.work-features strong { display:block; color:var(--text); font-size:11px; text-transform:uppercase; letter-spacing:.12em; margin-bottom:5px; }
+.work-card .tag-list { margin-top:auto; }
+.work-card .project-links { border-top:1px solid var(--line); padding-top:18px; width:100%; }
+@media (max-width: 900px) { .work-grid { grid-template-columns:1fr; } .work-card { min-height:0; } }
+@media (max-width: 760px) { .architecture-grid { grid-template-columns:1fr; } .architecture-visual { height:330px; } }

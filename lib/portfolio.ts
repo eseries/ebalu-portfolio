@@ -3,7 +3,6 @@ export const portfolio = {
   github: "https://github.com/eseries",
   linkedin: "https://www.linkedin.com/in/ebalumen-ibhafidon/",
   whatsapp: "https://wa.me/2348034522004",
-  projectUrl: "#",
 } as const;
 
 export const skills = {
@@ -20,17 +19,8 @@ export const services = [
   { name: "Technical SEO foundations", description: "Technical SEO, structured data, and crawlability improvements that make content easier for search engines to understand." },
 ] as const;
 
-export const refundAiProject = {
-  name: "Refund AI",
-  description: "An AI-assisted customer-support refund system combining a React frontend, Express.js REST API, deterministic refund-policy evaluation, Google Gemini classification, SQLite persistence, and audit logging.",
-  technologies: ["React", "Express.js", "Node.js", "SQLite", "Google Gemini"],
-  url: "https://github.com/eseries/refund-ai",
-} as const;
-
-export const ebaSeoProject = {
-  name: "Eba SEO",
-  description: "A lightweight WordPress SEO plugin that automatically outputs JSON-LD structured data for posts, pages, and custom post types with minimal setup.",
-  technologies: ["PHP", "WordPress Plugin API", "JSON-LD", "Schema.org"],
-  listingUrl: "https://wordpress.org/plugins/eba-seo/",
-  sourceUrl: "https://plugins.svn.wordpress.org/eba-seo/",
-} as const;
+export const projects = [
+  { name: "WORKNOON AI — AI-Powered Customer Support Refund System", description: "AI-enabled e-commerce refund platform that processes, approves, denies, or escalates refund requests based on order data and defined business rules. Built with synthetic CRM data (15+ customer profiles), policy engine (final sale, time windows, $500+ human review), LLM integration for classification/reasoning, and safeguards against prompt injection.", technologies: ["Next.js", "NestJS", "PostgreSQL", "OpenAI API", "Docker"], features: "Customer chat UI + Admin dashboard with audit logs", github: "https://github.com/eseries/refund-ai", live: "#contact" },
+  { name: "Solar Energy Project — Meter Management System", description: "Meter management system for solar energy operations — tracks meters, monitors usage, manages customer installations, and handles billing / energy consumption data.", technologies: ["Vue.js / Next.js", "React Native", "Node.js", "PostgreSQL"], features: "Meter tracking, usage monitoring, installations, and billing", github: "#contact", live: "#contact" },
+  { name: "WordPress SEO Plugin — JSON-LD Schema Plugin", description: "Custom WordPress plugin that auto-generates JSON-LD structured data for SEO — Article, Product, FAQ, Organization schemas for Google rich snippets.", technologies: ["WordPress", "PHP", "JSON-LD", "Schema.org"], features: "Article, Product, FAQ, and Organization schemas", github: "https://plugins.svn.wordpress.org/eba-seo/", live: "https://wordpress.org/plugins/eba-seo/" },
+] as const;
